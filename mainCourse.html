@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Outils de gestion et de soutien</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="d-flex justify-content-center py-3 text-bg-dark">
+
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.html" class="nav-link px-2 text-white">Accueil</a></li>
+                    <li><a href="mainCourse.html" class="nav-link px-2 text-secondary">La gestion de versions</a></li>
+                    <li><a href="git.html" class="nav-link px-2 text-white">Git</a></li>
+                    <li><a href="github.html" class="nav-link px-2 text-white">Github</a></li>
+                    <li><a href="gitlab.html" class="nav-link px-2 text-white">Gitlab</a></li>
+                    <li><a href="bitbucket.html" class="nav-link px-2 text-white">Bitbucket</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        <h1 class="text-center">La gestion de versions</h1>
+        <div class="row">
+            <div class="col">
+                <h2 class="mt-5">Contexte</h2>
+
+                <p>Comme vu dans la vidéo précédente, lorsque l'on développe une application et que l'on écrit du
+                    code, on peut faire face à différents risques qui peuvent mettre en péril le bon déroulement
+                    de ce développement : travail en équipe, perte des fichiers mais aussi apparition de bug suite
+                    à des modifications internes ou externes. Il est donc important d'utiliser un logiciel qui
+                    sauvegarde notre code, le partage avec les personnes qui travaillent avec nous et nous permet de 
+                    suivre l'évolution de notre code. On utilise donc presque systématiquement des 
+                    <strong>logiciels de gestion de versions </strong> ou <strong>VCS</strong> pour 
+                    <em>Version Control System</em>.<br><br>
+                    <em>Autres noms utilisés : gestionnaires de versions, systèmes de gestion de versions, logiciels de contrôle de versions, etc.</em>
+                </p>
+
+                <h2 class="mt-5">Définition</h2>
+                <p>Un <strong>logiciel de gestion de versions</strong> est un programme qui permet aux développeurs de <span class="text-decoration-underline">conserver un historique</span> des modifications et des versions de tous leurs fichiers.<br>
+                <br>Il permet de garder en mémoire :
+                <ul>
+                    <li>chaque modification de chaque fichier</li>
+                    <li>la raison et le contexte de cette modification dont la date et l'heure</li>
+                    <li>l'auteur de cette modification</li>
+                </ul></p>
+
+                <p>Fonctionnalités communes à tous les VCS :</p>
+                <ul>
+                    <li>Revenir à une version précédente du code en cas de problème.</li>
+                    <li>Suivre l’évolution du code étape par étape.</li>
+                    <li>Travailler à plusieurs sans risquer de supprimer les modifications des autres.</li>
+                </ul>
+
+            </div>
+        </div>
+    
+        <div class="row my-5">
+            <h2>Exemple</h2>
+            <div class="col-8 px-5">
+                <p> Par exemple, si je crée un fichier pour la première version (v1) de mon application, je peux y
+                    apporter des modifications afin d'arriver à une deuxième version (v2) et le logiciel gardera en mémoire les deux versions.</p>
+                <img src="src/img/vcs_day1.png" width="250"/>
+                <p class="mt-2">Si ensuite j'apporte de nouveau des modifications, j'aurai alors une troisième version de mon fichier (v3).</p>
+                <img src="src/img/vcs_day2.png" width="350"/>
+                <p class="mt-2">Si quelques jours plus tard une mise à jour survient sur une technologie que j'utilisais dans ma v3 et que celle-ci devient alors non-fonctionnelle, je
+                    peux facilement à l'aide de mon logiciel de gestion de versions, revenir à la version que je veux et
+                    retrouver les fichiers fonctionnels : v2 ou même v1.</p>
+                <img src="src/img/vcs_day3.png" width="350"/>
+            </div>
+        </div>
+        <h2>Deux types de VCS</h2>
+        <br>
+        <div class="row bg-success text-white pt-2">
+            <div class="col">
+                <h4 class="text-center">Centralisé</h4>
+            </div>
+            <div class="col">
+                <h4 class="text-center">Décentralisé (ou Distribué)</h4>
+            </div>
+        </div>
+        <div class="row bg-success bg-opacity-50 pt-2">
+            <div class="col">
+                <p><strong>Définition :</strong><br>Un VCS centralisé stocke tous les fichiers sur un <mark>unique serveur</mark>.</p>
+            </div>
+            <div class="col">
+                <p><strong>Définition :</strong><br>Un VCS décentralisé (ou distribué) stocke tous les fichiers sur un serveur <mark>en ligne</mark>
+                    mais aussi <mark>en local</mark> sur les machines des utilisateurs qui utilisent ce VCS.</p>
+            </div>
+        </div>
+        <div class="row bg-success bg-opacity-50">
+            <div class="col">
+                <p><strong>Avantage : </strong></p>
+                <ul>
+                    <li>Gestion plus simple des versions.</li>
+                </ul>
+            </div>
+            <div class="col">
+                <p><strong>Avantages :</strong></p>
+                    <ul>
+                        <li>Possibilité de travailler hors connexion.</li>
+                        <li>Moins dépendant du serveur qui héberge le code en ligne.</li>
+                        <li>Plusieurs personnes peuvent travailler à leur rythme sur un même projet, qu'ils soient ou non synchronisés.</li>
+                        <li>Possibilité de participer à des développements d'application <em>open source</em>.</li>
+                    </ul>
+            </div>  
+        </div>
+        <div class="row bg-success bg-opacity-50">
+            <div class="col">
+                <p><strong>Limites :</strong></p>
+                <ul>
+                    <li>Obligation de travailler avec une connexion Internet ou directement au serveur.</li>
+                    <li>Dépendance vis à vis du serveur qui héberge le code. 
+                        <em>Si une panne a lieu ou un accident se produit directement sur les serveurs, 
+                            je suis directement impacté et je peux même perdre tout mon travail.</em></li>
+                </ul>
+            </div>
+            <div class="col">
+                <p><strong>Limites :</strong></p>
+                <ul>
+                    <li>Complexité un peu plus importante.</li>
+                    <li>Nécessite de l'organisation et de la communication pour éviter les conflits de versions.</li>
+                </ul>
+
+            </div>   
+        </div>
+        <div class="row bg-success bg-opacity-50">
+            <div class="col">
+                <p><strong>Exemples de VCS centralisés:</strong></p><br>
+                <div class="row text-center">
+                    <div class="col">
+                        <img src="src/img/vcs_centralises.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <p><strong>Exemples de VCS décentralisés :</strong></p><br>
+                <div class="row text-center">
+                    <div class="col">
+                        <img src="src/img/vcs_distribues.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row text-center text-danger mt-3">
+            <p>Aujourd'hui les VCS les plus utilisés sont <strong>décentralisés</strong>. Le plus répandu étant Git.</p>
+        </div>
+
+        
+
+        <nav aria-label="Page navigation" class="m-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="index.html">Précédent</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="index.html">1</a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="git.html">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="git.html">Suivant</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
