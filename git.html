@@ -36,14 +36,14 @@
             
           </div>
 
-        
-        <h2>Retour sur la situation initiale</h2>
-        <div class="text-center mt-5">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gp_k0UVOYMw?start=36&end=172" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
 
+        <h2>Qu'est-ce que Git ?</h2>
+        <p>Git est un VCS <strong>décentralisé</strong>. Il utilise donc un dépôt distant et un dépôt local sur la machine de chaque utilisateur pour gérer leur code. 
+            Pour le dépôt distant, il est nécessaire d'utiliser un <strong>service en ligne</strong> qui hébergera le code. Il existe plusieurs 
+            services en ligne qui permettent d'herberger des dépots distants Git : Github, Gitlab, Bitbucket, etc. Bien qu'ils soient différents dans leur
+            manipulation, chacun de ces services se basent sur les mêmes principes de Git. Vous pourrez explorer ces services à travers les différentes démonstrations qui suivront.</p> 
 
-        <h2>Vocabulaire spécifique</h2>
+        <!-- <h2>Vocabulaire spécifique</h2>
         <ul>
             <li>Branche : </li>
             <li>Commit : </li>
@@ -56,20 +56,43 @@
         <h2>Commandes principales</h2>
         <ul>
             <li>git </li>
-        </ul>
+        </ul> -->
 
-        <h2>Installer git</h2>
-        <ol>
-            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed necessitatibus ullam neque corrupti perspiciatis minima praesentium repudiandae laborum maxime consectetur illo nobis explicabo, veniam molestias, totam nulla atque numquam quam.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius architecto, quibusdam harum saepe possimus ratione reprehenderit ut necessitatibus maiores voluptate officiis amet doloremque expedita ipsam nihil assumenda, vitae nostrum.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repudiandae porro eum libero mollitia distinctio, consequuntur voluptatum dolore maxime sint sed aperiam, fuga neque. Voluptatum, et! Tempora dolore quos nulla.</li>
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatum aliquid est magni quod illo nesciunt asperiores distinctio repellendus natus adipisci architecto suscipit accusantium eius nam ducimus, quo, blanditiis ex!</li>
-        </ol>
+        <h2 class="mt-5">Utiliser Git sur sa machine</h2>
+        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">1.Installation étape par étape</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">2. Initialisation étape par étape</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Démonstration vidéo étape 1 et 2</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <ol>
+                    <br>
+                    <li class="my-2">Rendez-vous sur le site officiel de <a target="_blank" href="https://git-scm.com/downloads">Git</a> et téléchargez la dernière version disponible pour votre système d'exploitation.</li>
+                    <img class="my-2" src="src/img/Git/install_page.png" width="720"/>
+                    <li class="my-2">Exécuter le fichier téléchargé.</li>
+                    <li class="my-2">Appuyez sur Suivant à chaque fenêtre puis sur Installer. Lors de l’installation, laissez toutes les options par défaut, elles conviennent bien.</li>
+                    <img class="my-2" src="src/img/Git/install_process_1.png"/>
+                    <li class="my-2">Si vous êtes sur Windows, cliquez sur <span class="fst-italic">"Launch Git Bash"</span> puis <span class="fst-italic">"Finish"</span>. Sur Mac, cette option n'est pas proposée, ouvrez à la place un Terminal.</li>
+                    <img class="my-2" src="src/img/Git/install_process_2.png"/>
+                </ol>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                Test vidéo
+            </div>
+          </div>
+          
+
 
         
-        <h2>Ressources supplémentaires</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aut inventore corrupti iure eveniet autem. Magnam iure quia voluptates voluptatem, consectetur praesentium nisi pariatur debitis assumenda magni doloremque officiis expedita.</p>
-
         <nav aria-label="Page navigation" class="m-5">
             <ul class="pagination justify-content-center">
                 <li class="page-item">
