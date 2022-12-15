@@ -18,16 +18,23 @@
                     <li><a href="index.html" class="nav-link px-2 text-white">Accueil</a></li>
                     <li><a href="mainCourse.html" class="nav-link px-2 text-white">La gestion de versions</a></li>
                     <li><a href="git.html" class="nav-link px-2 text-secondary">Git</a></li>
-                    <li><a href="github.html" class="nav-link px-2 text-white">Github</a></li>
-                    <li><a href="gitlab.html" class="nav-link px-2 text-white">Gitlab</a></li>
-                    <li><a href="bitbucket.html" class="nav-link px-2 text-white">Bitbucket</a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-2 text-white" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">Services en ligne</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="github.html" class="px-2 dropdown-item">Github</a></li>
+                            <li><a href="gitlab.html" class="px-2 dropdown-item">Gitlab</a></li>
+                            <li><a href="bitbucket.html" class="px-2 dropdown-item">Bitbucket</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </header>
     <br>
     <div class="container">
-        <h1 class="text-center">Focus : Git</h1>
+        <h1 class="text-center">Gros plan sur : Git</h1>
 
 
         <div class="clearfix">
@@ -57,34 +64,48 @@
             <li>git </li>
         </ul> -->
 
-        <h2 class="mt-5">Utiliser Git sur sa machine</h2>
+        <h2 class="mt-5">Installer et initialiser Git sur sa machine </h2>
         
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">1.Installation étape par étape</button>
+              <button class="nav-link active" id="installation-tab" data-bs-toggle="tab" data-bs-target="#installation-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"> Étape par étape</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">2. Initialisation étape par étape</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Démonstration vidéo étape 1 et 2</button>
+              <button class="nav-link" id="video-resume-tab" data-bs-toggle="tab" data-bs-target="#video-resume-tab-pane" type="button" role="tab" aria-controls="video-resume-tab-pane" aria-selected="false">Démonstration vidéo</button>
             </li>
           </ul>
 
           <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div class="tab-pane fade show active" id="installation-tab-pane" role="tabpanel" aria-labelledby="installation-tab" tabindex="0">
                 <ol>
                     <br>
                     <li class="my-2">Rendez-vous sur le site officiel de <a target="_blank" href="https://git-scm.com/downloads">Git</a> et téléchargez la dernière version disponible pour votre système d'exploitation.</li>
                     <img class="my-2" src="src/img/Git/install_page.png" width="720"/>
-                    <li class="my-2">Exécuter le fichier téléchargé.</li>
+                    <li class="my-2">Exécutez le fichier téléchargé.</li>
                     <li class="my-2">Appuyez sur Suivant à chaque fenêtre puis sur Installer. Lors de l’installation, laissez toutes les options par défaut, elles conviennent bien.</li>
                     <img class="my-2" src="src/img/Git/install_process_1.png"/>
                     <li class="my-2">Si vous êtes sur Windows, cliquez sur <span class="fst-italic">"Launch Git Bash"</span> puis <span class="fst-italic">"Finish"</span>. Sur Mac, cette option n'est pas proposée, ouvrez à la place un Terminal.</li>
                     <img class="my-2" src="src/img/Git/install_process_2.png"/>
+                    <li  class="my-2">Que vous soyez sur Windows ou sur Mac, vous devriez maintenant avoir un terminal face à vous.</li>
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="my-2" src="src/img/Git/terminal_1.png" width="550"/>
+                            <p class="fst-italic text-center">Terminal classique sur une distribution Linux.</p>
+                        </div>
+                        <div class="col-6">
+                            <img class="my-2" src="src/img/Git/git_bash.png" width="600"/>
+                            <p class="fst-italic text-center">Termninal Git Bash sur Windows.</p>
+                        </div>
+                    </div>
+                    <li  class="my-2">Dans ce terminal, entrez la commande suivante pour initialiser votre nom d'utilisateur : <span class="fst-italic">git config --global user.name  "John Doe"</span></li>
+                    <img class="my-2" src="src/img/Git/terminal_rename.png" width="720"/>
+                    <li  class="my-2">Toujours dans ce terminal, entrez la commande suivante pour initaliser votre adresse mail : <span class="fst-italic">git config --global user.email  johndoe@example.com</span></li>
+                    <img class="my-2" src="src/img/Git/terminal_email.png" width="720"/>
+                    <li  class="my-2">Bravo, Git est maintenant fonctionnel sur votre machine ! Maintenant, pour chaque projet informatique il vous suffira de créer un dépôt local et un dépôt distant. <br>
+                        Pour savoir comment faire, choisissez un tutoriel parmi les trois proposés dans la section <span class="fst-italic">Services en ligne</span> : Github, Gitlab ou Bitbucket.</li>
                 </ol>
             </div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="tab-pane fade" id="video-resume-tab-pane" role="tabpanel" aria-labelledby="video-resume-tab" tabindex="0">
                 Test vidéo
             </div>
           </div>
