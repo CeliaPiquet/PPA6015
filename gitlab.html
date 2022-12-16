@@ -36,13 +36,91 @@
     </header>
     <br>
     <div class="container">
-        <h1>Tutoriel : Gitlab</h1>
+        <h1 class="text-center">Gitlab</h1>
 
-        <p>Courte présentation</p>
+        <div class="clearfix">
+            <img src="src/img/Gitlab/GitLab_icon.svg" class="col-md-1 float-md-end mb-3 ms-md-3" alt="...">
+        </div>
 
-        <p>Créer son projet étape par étape</p>
+        <h2>Qu'est-ce que Gitlab ?</h2>
+        <p>Gitlab est un service web qui permet d'heberger du code et d'offrir un dépôt distant Git. Il est directement accessible sur <a href="https://gitlab.com/">https://gitlab.com/</a>.</p>
+      
 
-        <p>Paramétrer son projet</p>
+
+        <h2 class="my-3">Avantages et limites du service</h2>
+        <div class="mb-3 row ">
+            <div class="col-1"></div>
+            <div class="col-5 text-center">
+                <img src="src/img/Gitlab/Gitlab-avantages.png" style="width:100%">
+            </div>
+            <div class="col-5 text-center">
+                <img src="src/img/Gitlab/Gitlab-limites.png" style="width:100%">
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+        <h2>Utiliser Gitlab</h2>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="account-tab" data-bs-toggle="tab"
+                    data-bs-target="#account-tab-pane" type="button" role="tab" aria-controls="account-tab-pane"
+                    aria-selected="true"> 1. Créer un compte</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="distant-repo-tab" data-bs-toggle="tab"
+                    data-bs-target="#distant-repo-tab-pane" type="button" role="tab"
+                    aria-controls="distant-repo-tab-pane" aria-selected="false">2. Créer le dépôt distant</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="local-repo-tab" data-bs-toggle="tab"
+                    data-bs-target="#local-repo-tab-pane" type="button" role="tab"
+                    aria-controls="local-repo-tab-pane" aria-selected="false">3. Créer le dépôt local</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="manipulations-tab" data-bs-toggle="tab"
+                    data-bs-target="#manipulations-tab-pane" type="button" role="tab"
+                    aria-controls="manipulations-tab-pane" aria-selected="false">4. Tester quelques manipulations</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="video-resume-tab" data-bs-toggle="tab"
+                    data-bs-target="#video-resume-tab-pane" type="button" role="tab"
+                    aria-controls="video-resume-tab-pane" aria-selected="false">Résumé en vidéo</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="account-tab-pane" role="tabpanel"
+                aria-labelledby="installation-tab" tabindex="0">
+               <ol>
+                <li class="my-2">Allez sur le site <a href="https://gitlab.com/">https://gitlab.com/</a></li>
+
+                <li class="my-2">Cliquez sur <span class="fst-italic">Sign-up</span> pour accéder à la page d'inscription et remplissez le formulaire.</li>
+
+                <li class="my-2">Une fois le formulaire rempli et envoyer, vous allez recevoir un code de confirmation par mail qu'il va falloir entrer dans la page suivante.</li>
+
+                <li class="my-2">Vous pouvez <span class="fst-italic">Skip personalization</span> cela n'a pas d'intérêt.</li>
+                <li class="my-2">Vous avez maintenant votre tableau de bord face à vous.</li>
+
+            </ol>
+            </div>
+            <div class="tab-pane fade" id="distant-repo-tab-pane" role="tabpanel" aria-labelledby="distant-repo-tab"
+                tabindex="0">
+                Test dépot distant
+            </div>
+            <div class="tab-pane fade" id="local-repo-tab-pane" role="tabpanel" aria-labelledby="local-repo-tab"
+                tabindex="0">
+                Test dépot local
+            </div>
+            <div class="tab-pane fade" id="manipulations-tab-pane" role="tabpanel" aria-labelledby="manipulations-tab"
+                tabindex="0">
+                Test manipualtions
+            </div>
+            <div class="tab-pane fade" id="video-resume-tab-pane" role="tabpanel" aria-labelledby="video-resume-tab"
+                tabindex="0">
+                Test vidéo
+            </div>
+        </div>
 
     </div>
 

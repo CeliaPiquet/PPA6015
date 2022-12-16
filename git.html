@@ -18,7 +18,7 @@
                     <li><a href="index.html" class="nav-link px-2 text-white">Accueil</a></li>
                     <li><a href="mainCourse.html" class="nav-link px-2 text-white">La gestion de versions</a></li>
                     <li><a href="git.html" class="nav-link px-2 text-secondary">Git</a></li>
-                    
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle px-2 text-white" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">Services en ligne</a>
@@ -39,15 +39,46 @@
 
         <div class="clearfix">
             <img src="src/img/Git/Git-logo-mini.png" class="col-md-1 float-md-end mb-3 ms-md-3" alt="...">
-          
+
         </div>
 
 
         <h2>Qu'est-ce que Git ?</h2>
-        <p>Git est un VCS <strong>décentralisé</strong>. Il utilise donc un dépôt distant et un dépôt local sur la machine de chaque utilisateur pour gérer leur code. 
-            Pour le dépôt distant, il est nécessaire d'utiliser un <strong>service en ligne</strong> qui hébergera le code. Il existe plusieurs 
-            services en ligne qui permettent d'herberger des dépots distants Git : Github, Gitlab, Bitbucket, etc. Bien qu'ils soient différents dans leur
-            manipulation, chacun de ces services se basent sur les mêmes principes de Git. Vous pourrez explorer ces services à travers les différentes démonstrations qui suivront.</p> 
+        <p>Git est un VCS <strong>décentralisé</strong>. Il utilise donc un dépôt distant et un dépôt local sur la
+            machine de chaque utilisateur pour gérer leur code.
+            Pour le dépôt distant, il est nécessaire d'utiliser un <strong>service en ligne</strong> qui hébergera le
+            code. Il existe plusieurs
+            services en ligne qui permettent d'herberger des dépôts distants Git : Github, Gitlab, Bitbucket, etc. Bien
+            qu'ils soient différents dans leur
+            manipulation, chacun de ces services se basent sur les mêmes principes de Git. Vous pourrez explorer ces
+            services à travers les différentes démonstrations qui suivront.</p>
+
+        
+        <div class="row ">
+            <h2 class="mt-5">Comment fonctionne Git ?</h2>
+            <div class="col mt-3">
+                <p> Il est important de comprendre que lorsque nous utilisons Git notre code navigue finalement entre différents états ou zones (<span class="fst-italic">voir image ci-contre</span>).
+                    Les deux principales zones étant le <span class="text-success">dépôt local</span> et le <span class="text-primary">dépôt distant</span>. <br><br> Si le dépôt distant se résume à un service web externe qui hébergera notre code (comme Github ou Gitlab),
+                    le dépôt local est, en revanche, lui-même composé de plusieurs zones de travail : le <strong>Working directory</strong>, le <strong>Stage</strong> et le <strong>Repository</strong>.<br>
+                    <br>Autrement dit : 
+                    <ul>
+                        <li>Lorsque je crée ou modifie un fichier de code sur ma machine, il est initialement dans mon <strong>Working directory</strong>.</li>
+                        <li>Lorsque je suis satisfaite de ce fichier, je vais le passer au <strong>Stage</strong> qui permet de garder en local cette bonne version de fichier.</li>
+                        <li>Lorsque j'ai un ou plusieurs fichiers en <strong>Stage</strong>, je peux passer tous les fichiers du <strong>Stage</strong> en <strong>Repository</strong>. Cette étape
+                            permet d'empacter ces fichiers et d'y mettre un commentaire pour mieux le repérer plus tard.</li>
+                        <li>Enfin, lorsque mon paquet de fichiers est prêt, je peux l'envoyer sur mon <span class="text-primary">dépôt distant</span> pour qu'il soit sauvegardé puis partager avec tous les utilisateurs de ce dépôt.</li>
+                    </ul> 
+                    
+                    
+                    Pour passer d'une zone à une autre git nous fournit des commandes que l'on peut entrer dans un terminal : <span class="bg-light border">git add</span>, 
+                    <span class="bg-light border">git push</span>, etc. Nous les verrons petit à petit au cours de la leçon et de la session.
+                </p>
+            </div>
+            <div class="col mt-0">
+                <img src="src/img/Git/git-process-crop.png" width="720"/>
+            </div>
+        </div>
+        
 
         <!-- <h2>Vocabulaire spécifique</h2>
         <ul>
@@ -65,54 +96,71 @@
         </ul> -->
 
         <h2 class="mt-5">Installer et initialiser Git sur sa machine </h2>
-        
+
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="installation-tab" data-bs-toggle="tab" data-bs-target="#installation-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"> Étape par étape</button>
+                <button class="nav-link active" id="installation-tab" data-bs-toggle="tab"
+                    data-bs-target="#installation-tab-pane" type="button" role="tab" aria-controls="installation-tab-pane"
+                    aria-selected="true"> Étape par étape</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="video-resume-tab" data-bs-toggle="tab" data-bs-target="#video-resume-tab-pane" type="button" role="tab" aria-controls="video-resume-tab-pane" aria-selected="false">Démonstration vidéo</button>
+                <button class="nav-link" id="video-resume-tab" data-bs-toggle="tab"
+                    data-bs-target="#video-resume-tab-pane" type="button" role="tab"
+                    aria-controls="video-resume-tab-pane" aria-selected="false">Démonstration vidéo</button>
             </li>
-          </ul>
+        </ul>
 
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="installation-tab-pane" role="tabpanel" aria-labelledby="installation-tab" tabindex="0">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="installation-tab-pane" role="tabpanel"
+                aria-labelledby="installation-tab" tabindex="0">
                 <ol>
                     <br>
-                    <li class="my-2">Rendez-vous sur le site officiel de <a target="_blank" href="https://git-scm.com/downloads">Git</a> et téléchargez la dernière version disponible pour votre système d'exploitation.</li>
-                    <img class="my-2" src="src/img/Git/install_page.png" width="720"/>
+                    <li class="my-2">Rendez-vous sur le site officiel de <a target="_blank"
+                            href="https://git-scm.com/downloads">Git</a> et téléchargez la dernière version disponible
+                        pour votre système d'exploitation.</li>
+                    <img class="my-2" src="src/img/Git/install_page.png" width="720" />
                     <li class="my-2">Exécutez le fichier téléchargé.</li>
-                    <li class="my-2">Appuyez sur Suivant à chaque fenêtre puis sur Installer. Lors de l’installation, laissez toutes les options par défaut, elles conviennent bien.</li>
-                    <img class="my-2" src="src/img/Git/install_process_1.png"/>
-                    <li class="my-2">Si vous êtes sur Windows, cliquez sur <span class="fst-italic">"Launch Git Bash"</span> puis <span class="fst-italic">"Finish"</span>. Sur Mac, cette option n'est pas proposée, ouvrez à la place un Terminal.</li>
-                    <img class="my-2" src="src/img/Git/install_process_2.png"/>
-                    <li  class="my-2">Que vous soyez sur Windows ou sur Mac, vous devriez maintenant avoir un terminal face à vous.</li>
+                    <li class="my-2">Appuyez sur Suivant à chaque fenêtre puis sur Installer. Lors de l’installation,
+                        laissez toutes les options par défaut, elles conviennent bien.</li>
+                    <img class="my-2" src="src/img/Git/install_process_1.png" />
+                    <li class="my-2">Si vous êtes sur Windows, cliquez sur <span class="fst-italic">"Launch Git
+                            Bash"</span> puis <span class="fst-italic">"Finish"</span>. Sur Mac, cette option n'est pas
+                        proposée, ouvrez à la place un Terminal.</li>
+                    <img class="my-2" src="src/img/Git/install_process_2.png" />
+                    <li class="my-2">Que vous soyez sur Windows ou sur Mac, vous devriez maintenant avoir un terminal
+                        face à vous.</li>
                     <div class="row">
                         <div class="col-6">
-                            <img class="my-2" src="src/img/Git/terminal_1.png" width="550"/>
+                            <img class="my-2" src="src/img/Git/terminal_1.png" width="550" />
                             <p class="fst-italic text-center">Terminal classique sur une distribution Linux.</p>
                         </div>
                         <div class="col-6">
-                            <img class="my-2" src="src/img/Git/git_bash.png" width="600"/>
+                            <img class="my-2" src="src/img/Git/git_bash.png" width="600" />
                             <p class="fst-italic text-center">Termninal Git Bash sur Windows.</p>
                         </div>
                     </div>
-                    <li  class="my-2">Dans ce terminal, entrez la commande suivante pour initialiser votre nom d'utilisateur : <span class="fst-italic">git config --global user.name  "John Doe"</span></li>
-                    <img class="my-2" src="src/img/Git/terminal_rename.png" width="720"/>
-                    <li  class="my-2">Toujours dans ce terminal, entrez la commande suivante pour initaliser votre adresse mail : <span class="fst-italic">git config --global user.email  johndoe@example.com</span></li>
-                    <img class="my-2" src="src/img/Git/terminal_email.png" width="720"/>
-                    <li  class="my-2">Bravo, Git est maintenant fonctionnel sur votre machine ! Maintenant, pour chaque projet informatique il vous suffira de créer un dépôt local et un dépôt distant. <br>
-                        Pour savoir comment faire, choisissez un tutoriel parmi les trois proposés dans la section <span class="fst-italic">Services en ligne</span> : Github, Gitlab ou Bitbucket.</li>
+                    <li class="my-2">Dans ce terminal, entrez la commande suivante pour initialiser votre nom
+                        d'utilisateur : <span class="fst-italic">git config --global user.name "John Doe"</span></li>
+                    <img class="my-2" src="src/img/Git/terminal_rename.png" width="720" />
+                    <li class="my-2">Toujours dans ce terminal, entrez la commande suivante pour initaliser votre
+                        adresse mail : <span class="fst-italic">git config --global user.email
+                            johndoe@example.com</span></li>
+                    <img class="my-2" src="src/img/Git/terminal_email.png" width="720" />
+                    <li class="my-2">Bravo, Git est maintenant fonctionnel sur votre machine ! Maintenant, pour chaque
+                        projet informatique il vous suffira de créer un dépôt local et un dépôt distant. <br>
+                        Pour savoir comment faire, choisissez un tutoriel parmi les trois proposés dans la section <span
+                            class="fst-italic">Services en ligne</span> : Github, Gitlab ou Bitbucket.</li>
                 </ol>
             </div>
-            <div class="tab-pane fade" id="video-resume-tab-pane" role="tabpanel" aria-labelledby="video-resume-tab" tabindex="0">
+            <div class="tab-pane fade" id="video-resume-tab-pane" role="tabpanel" aria-labelledby="video-resume-tab"
+                tabindex="0">
                 Test vidéo
             </div>
-          </div>
-          
+        </div>
 
 
-        
+
+
         <nav aria-label="Page navigation" class="m-5">
             <ul class="pagination justify-content-center">
                 <li class="page-item">
@@ -131,7 +179,7 @@
                     <a class="page-link">Suivant</a>
                 </li>
             </ul>
-        </nav>       
+        </nav>
 
     </div>
 
