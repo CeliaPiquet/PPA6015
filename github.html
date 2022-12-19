@@ -16,10 +16,9 @@
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.html" class="nav-link px-2 text-secondary">Accueil</a></li>
+                    <li><a href="index.html" class="nav-link px-2 text-white">Accueil</a></li>
                     <li><a href="mainCourse.html" class="nav-link px-2 text-white">La gestion de versions</a></li>
                     <li><a href="git.html" class="nav-link px-2 text-white">Git</a></li>
-
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle px-2 text-white" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">Services en ligne</a>
@@ -29,6 +28,8 @@
                             <li><a href="bitbucket.html" class="px-2 dropdown-item">Bitbucket</a></li>
                         </ul>
                     </li>
+                    <li><a href="other_ressources.html" class="nav-link px-2 text-white">Ressources supplémentaires</a></li>
+
                 </ul>
 
             </div>
@@ -37,6 +38,14 @@
     <br>
     <div class="container">
         <h1 class="text-center">Github</h1>
+        <h5 class="text-center">
+            Autonomie 
+            <span class="text-success">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                    <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                </svg>
+            </span>
+        </h5>
 
         <div class="clearfix">
             <img src="src/img/Github/GitHub_Mark.png" class="col-md-1 float-md-end mb-3 ms-md-3" alt="...">
@@ -63,7 +72,7 @@
             <div class="col-1"></div>
         </div>
 
-        <h2>Utiliser Github</h2>
+        <h2>Comment utiliser Github ?</h2>
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -79,17 +88,12 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="local-repo-tab" data-bs-toggle="tab"
                     data-bs-target="#local-repo-tab-pane" type="button" role="tab"
-                    aria-controls="local-repo-tab-pane" aria-selected="false">3. Créer le dépôt local</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="manipulations-tab" data-bs-toggle="tab"
-                    data-bs-target="#manipulations-tab-pane" type="button" role="tab"
-                    aria-controls="manipulations-tab-pane" aria-selected="false">4. Tester quelques manipulations</button>
+                    aria-controls="local-repo-tab-pane" aria-selected="false">3. Créer et tester le dépôt local</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="video-resume-tab" data-bs-toggle="tab"
                     data-bs-target="#video-resume-tab-pane" type="button" role="tab"
-                    aria-controls="video-resume-tab-pane" aria-selected="false">Résumé en vidéo</button>
+                    aria-controls="video-resume-tab-pane" aria-selected="false">Résumé en vidéo et travail collaboratif</button>
             </li>
         </ul>
 
@@ -110,24 +114,56 @@
             </div>
             <div class="tab-pane fade" id="distant-repo-tab-pane" role="tabpanel" aria-labelledby="distant-repo-tab"
                 tabindex="0">
-                Test dépot distant
+                <ol>
+                    <li class="my-2">Une fois connecté, cliquez sur + puis sur <span class="fst-italic">New repository</span> en haut à droite de la fanêtre.</li>
+                    <img class="my-2" src="src/img/Github/create_repo.png">
+                    <li class="my-2">Remplissez le formulaire en nommant votre dépôt et en laissant la visibilité en public, cela me permettre d'y accéder facilement.
+                        <br>Cliquez ensuite sur <span class="fst-italic">Create repository</span>.
+                    </li>
+                    <img class="my-2" src="src/img/Github/create_repo_form.png" width="50%">
+                    <li class="my-2">Bravo votre dépôt distant est créé. </li>
+                    <img class="my-2" src="src/img/Github/create_repo_final.png" width="720">
+                </ol>
             </div>
             <div class="tab-pane fade" id="local-repo-tab-pane" role="tabpanel" aria-labelledby="local-repo-tab"
                 tabindex="0">
-                Test dépot local
-            </div>
-            <div class="tab-pane fade" id="manipulations-tab-pane" role="tabpanel" aria-labelledby="manipulations-tab"
-                tabindex="0">
-                Test manipualtions
+                <ol>
+                    <li class="my-2">Placez vous dans un répertoire vide qui contiendra vos fichiers de code puis ouvrez, depuis cet endroit, Git Bash (ou un Terminal le cas échéant).</li>
+
+                    <li class="my-2">Entrez la commande <mark>git init</mark>. Celle-ci va créer un fichier caché <span class="fst-italic">.git</span> faisant ainsi de votre répertoire un dépôt local Git.</li>
+                    <img class="my-2" src="src/img/Github/cmd/git init.png">
+                    <li class="my-2">Pour tester notre VCS et la bonne interaction de nos deux dépôts, il faut manipuler des fichiers. <br>
+                        Créez donc un fichier HTML avec la commande <mark>touch index.html</mark>. Vous pouvez y écrire ce que vous voulez à l'intérieur.</li>
+                    <img class="my-2" src="src/img/Github/cmd/touch.png">
+                    <li class="my-2">Entrez la commande <mark>git add index.html</mark>. Celle-ci ajoute notre fichier à notre Stage (<span class="fst-italic">cf. section Git pour rappeler cette étape</span>).</li>
+                    <img class="my-2" src="src/img/Github/cmd/git add.png">
+                    <li class="my-2">Entrez la commande <mark>git commit -m "Ceci est mon premier commit"</mark>. Vous pouvez bien sûr mettre n'importe quel message entre les guillemets. <br>
+                        Cette étape empaquette notre fichier comme une lettre mise dans une enveloppe. L'option <mark>-m</mark> permet d'inscrire des informations sur ce paquet, comme on pourrait inscrire une adresse sur notre enveloppe.</li>
+                    <img class="my-2" src="src/img/Github/cmd/git commit.png">
+                    <li class="my-2">Entrez la commande <mark>git branch -M main</mark>. Celle-ci permet de créer une branche de travail principale appelée main. 
+                        Dans Git, une branche est une ligne temporelle sur laquelle sont sauvegardées différentes versions de code. 
+                        Vous pourrez en apprendre plus sur le système de branche dans la vidéo dédiée à ce sujet dans les ressources supplémentaires.</li>
+                    <img class="my-2" src="src/img/Github/cmd/git branch.png">
+                    <li class="my-2">Entrez la commande <mark>git remote add origin <span class="fst-italic">url_du_dépôt_distant</span></mark> en y inscrivant l'url de votre dépôt distant (celle-ci est disponible sur la page de votre dépôt et finit par <span class="fts-italic">.git</span>).</li>
+                    <img class="my-2" src="src/img/Github/cmd/git remote.png">
+                    <li class="my-2">Enfin, entrez la commande <mark>git push -u origin main</mark> afin d'envoyer votre nouvelle branche <span class="fst-italic">main</span> sur votre dépôt distant.</li>
+                    <img class="my-2" src="src/img/Github/cmd/git push.png">
+                    <li class="my-2">Si maintenant vous revenez sur votre page Github et que vous l'actualisez, vous devriez voir votre fichier index.html ainsi que le message de votre commit.</li>
+                    <img class="my-2" src="src/img/Github/github_updated.png">
+                </ol>
             </div>
             <div class="tab-pane fade" id="video-resume-tab-pane" role="tabpanel" aria-labelledby="video-resume-tab"
                 tabindex="0">
-                Test vidéo
+                <br>
+                <p>Pour résumer les étapes précédentes, vous pouvez regarder la vidéo suivante de 2min52 à 9min30.<br>
+                Vous pouvez également regarder le reste de la vidéo qui vous explique un peu plus en détail le système de branche évoqué à l'étape 3. </p>
+                
+                <div class="text-center">            
+                    <iframe width="1120" height="630" src="https://www.youtube.com/embed/gp_k0UVOYMw?start=172" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
             </div>
         </div>
-
-
-
     </div>
 
 
