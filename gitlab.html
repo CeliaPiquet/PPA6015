@@ -16,7 +16,7 @@
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.html" class="nav-link px-2 text-secondary">Accueil</a></li>
+                    <li><a href="index.html" class="nav-link px-2 text-white">Accueil</a></li>
                     <li><a href="mainCourse.html" class="nav-link px-2 text-white">La gestion de versions</a></li>
                     <li><a href="git.html" class="nav-link px-2 text-white">Git</a></li>
                     
@@ -29,6 +29,8 @@
                             <li><a href="bitbucket.html" class="px-2 dropdown-item">Bitbucket</a></li>
                         </ul>
                     </li>
+                    <li><a href="other_ressources.html" class="nav-link px-2 text-white">Ressources supplémentaires</a></li>
+
                 </ul>
 
             </div>
@@ -36,13 +38,64 @@
     </header>
     <br>
     <div class="container">
-        <h1>Tutoriel : Gitlab</h1>
+        <h1 class="text-center">Gitlab</h1>
+        <h5 class="text-center">
+            Autonomie 
+            <span class="text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                    <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                </svg>
+            </span>
+            <span class="text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16">
+                    <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"/>
+                </svg>
+            </span>
+        </h5>
 
-        <p>Courte présentation</p>
+        <div class="clearfix">
+            <img src="src/img/Gitlab/GitLab_icon.svg" class="col-md-1 float-md-end mb-3 ms-md-3" alt="...">
+        </div>
 
-        <p>Créer son projet étape par étape</p>
+        <h2>Qu'est-ce que Gitlab ?</h2>
+        <p>Gitlab est un service web qui permet d'heberger du code et d'offrir un dépôt distant Git. Il est directement accessible sur <a href="https://gitlab.com/">https://gitlab.com/</a>.</p>
+      
 
-        <p>Paramétrer son projet</p>
+
+        <h2 class="my-3">Avantages et limites du service</h2>
+        <div class="mb-3 row ">
+            <div class="col-1"></div>
+            <div class="col-5 text-center">
+                <img src="src/img/Gitlab/Gitlab-avantages.png" style="width:100%">
+            </div>
+            <div class="col-5 text-center">
+                <img src="src/img/Gitlab/Gitlab-limites.png" style="width:100%">
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+        <h2>Comment utiliser Gitlab ?</h2>
+
+        
+        <ol>
+            <li class="my-2">Créez un compte sur <a href="https://gitlab.com/">https://gitlab.com/ et connectez-vous.</a></li>
+            <li class="my-2">Créez un nouveau <span class="fst-italic">blank</span> projet public et copiez l'url de votre dépôt.</a></li>
+            <li class="my-2">Placez vous dans un répertoire vide qui contiendra vos fichiers de code puis ouvrez, depuis cet endroit, Git Bash (ou un Terminal le cas échéant).</li>
+            <li class="my-2">Entrez la commande <mark>git init</mark>. Celle-ci va créer un fichier caché <span class="fst-italic">.git</span> faisant ainsi de votre répertoire un dépôt local Git.</li>
+            <li class="my-2">Pour tester notre VCS et la bonne interaction de nos deux dépôts, il faut manipuler des fichiers. <br>
+                Créez donc un fichier HTML avec la commande <mark>touch index.html</mark>. Vous pouvez y écrire ce que vous voulez à l'intérieur.</li>
+            <li class="my-2">Entrez la commande <mark>git add index.html</mark>. Celle-ci ajoute notre fichier à notre Stage (<span class="fst-italic">cf. section Git pour rappeler cette étape</span>).</li>
+            <li class="my-2">Entrez la commande <mark>git commit -m "Ceci est mon premier commit"</mark>. Vous pouvez bien sûr mettre n'importe quel message entre les guillemets. <br>
+                Cette étape empaquette notre fichier comme une lettre mise dans une enveloppe. L'option <mark>-m</mark> permet d'inscrire des informations sur ce paquet, comme on pourrait inscrire une adresse sur notre enveloppe.</li>
+            <li class="my-2">Entrez la commande <mark>git branch -M main</mark>. Celle-ci permet de créer une branche de travail principale appelée main. 
+                Dans Git, une branche est une ligne temporelle sur laquelle sont sauvegardées différentes versions de code. 
+                Vous pourrez en apprendre plus sur le système de branche dans la vidéo dédiée à ce sujet dans les ressources supplémentaires.</li>
+            <li class="my-2">Entrez la commande <mark>git remote add origin <span class="fst-italic">url_du_dépôt_distant</span></mark> en y inscrivant l'url de votre dépôt distant (celle-ci est disponible sur la page de votre dépôt et finit par <span class="fts-italic">.git</span>).</li>
+            <li class="my-2">Enfin, entrez la commande <mark>git push -u origin main</mark> afin d'envoyer votre nouvelle branche <span class="fst-italic">main</span> sur votre dépôt distant.</li>
+            <li class="my-2">Si maintenant vous revenez sur votre page Gitlab et que vous l'actualisez, vous devriez voir votre fichier index.html ainsi que le message de votre commit.</li>
+
+        </ol>
+            
 
     </div>
 
